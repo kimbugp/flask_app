@@ -1,7 +1,5 @@
-flask
-flask-bcrypt
-flask-migrate
-flask-sqlalchemy
-flask-wtf
-psycopg2
-flask-testing
+Flask==1.0.3
+Flask-Bcrypt==0.7.1
+Flask-Migrate==2.5.2
+Flask-SQLAlchemy==2.4.0
+psycopg2-binary==2.8.3

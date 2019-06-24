@@ -8,8 +8,9 @@ cwd = os.getcwd()
 script_dir = os.path.dirname(os.path.realpath(__file__))
 
 
-def main(argv):
-    parser = argparse.ArgumentParser(description='My flask  app boilerplate code')
+def program(argv):
+    parser = argparse.ArgumentParser(
+        description='My flask  app boilerplate code')
     parser.add_argument('appname', help='The application name')
     parser.add_argument('-d', '--destination', help='Folder to copy code to')
     args = parser.parse_args()
@@ -20,5 +21,9 @@ def main(argv):
     shutil.copytree(os.path.join(script_dir, destination), fullpath)
 
 
+def main():
+    program(sys.argv)
+
+
 if __name__ == '__main__':
-    main(sys.argv)
+    main()
