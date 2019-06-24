@@ -1,9 +1,7 @@
 import argparse
-import codecs
 import os
 import shutil
 import sys
-import jinja2
 
 
 cwd = os.getcwd()
@@ -19,7 +17,6 @@ def main(argv):
     appname = args.appname
     fullpath = os.path.join(cwd, appname)
     destination = args.destination
-
     shutil.copytree(os.path.join(script_dir, destination), fullpath)
 
 
