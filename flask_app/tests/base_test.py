@@ -1,6 +1,6 @@
-from app import create_app
 from app.config import app_env
 from flask_testing import TestCase
+from app import create_app
 
 app = create_app()
 

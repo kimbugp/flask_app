@@ -11,8 +11,9 @@ flask-bcrypt = "*"
 flask-migrate = "*"
 flask-sqlalchemy = "*"
 flask-wtf = "*"
-psycopg2 = "*"
+psycopg2-binary = "*"
 flask-testing = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.6"

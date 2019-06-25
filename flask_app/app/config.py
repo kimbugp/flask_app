@@ -1,5 +1,4 @@
 import os
-from posix import environ
 
 
 class BaseConfig(object):

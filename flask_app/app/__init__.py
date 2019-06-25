@@ -22,7 +22,7 @@ def create_app():
     migrate.init_app(app, db)
 
     # register blueprints
-    from views import sample_blueprint
+    from app.views import sample_blueprint
     app.register_blueprint(sample_blueprint)
 
     return app
