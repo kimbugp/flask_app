@@ -1,4 +1,4 @@
-from base import BaseTestCase
+from base_test import BaseTestCase
 
 
 class TestHelloWorld(BaseTestCase):
