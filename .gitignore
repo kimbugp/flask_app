@@ -5,3 +5,4 @@ flask_app.egg-info
 build/
 flask_app/.env
 *.pyc
+.vscode
