@@ -7,8 +7,18 @@ A python package to create flask boiler plate code
 * Run  `pip install flask-app`
 
 ## __Usage__
-To create a new flask boilerplate, run
-* `flask-app [name_of_app] [-d destination directory]`
+- Set up a virtual environment 
+- Create a new flask boilerplate, run
+    ```
+    flask-app [name_of_app] [-d destination directory]
+    ```
+
+- Update the .env file with the respective variables 
+
+- Source the .env file with `source .env`
+- Run `flask db init` to initialize  migration files
+- Run `flask db migrate` to create migrations
+
 
 ## __Author__
 
