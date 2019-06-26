@@ -3,7 +3,6 @@ import os
 import shutil
 import sys
 
-
 cwd = os.getcwd()
 script_dir = cwd+'/flask_app'
 
@@ -16,12 +15,13 @@ def program(argv):
     args = parser.parse_args()
 
     appname = args.appname
-    fullpath = os.path.join(cwd, appname)
     destination = args.destination
-    shutil.copytree(os.path.join(script_dir, destination), fullpath)
+    
+    destination_path = os.path.join(destination, appname)
+    shutil.copytree(os.path.join(script_dir), destination_path)
 
     # create .env file
-    shutil.copy(fullpath+'/.env.sample', fullpath+'/.env')
+    shutil.copy(destination_path+'/.env.sample', destination_path+'/.env')
 
 
 def main():
