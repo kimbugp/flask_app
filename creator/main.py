@@ -5,7 +5,7 @@ import sys
 
 
 cwd = os.getcwd()
-script_dir = os.path.dirname(os.path.realpath(__file__))
+script_dir = cwd+'/flask_app'
 
 
 def program(argv):
@@ -19,7 +19,7 @@ def program(argv):
     fullpath = os.path.join(cwd, appname)
     destination = args.destination
     shutil.copytree(os.path.join(script_dir, destination), fullpath)
-    os.remove(fullpath+'/__main__.py')
+
     # create .env file
     shutil.copy(fullpath+'/.env.sample', fullpath+'/.env')
 

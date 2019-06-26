@@ -14,7 +14,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     entry_points={
         'console_scripts': [
-            'flask-app=flask_app.__main__:main'
+            'flask-app=creator.main:main'
         ]
     },
     url="https://github.com/kimbugp/flask_app",
