@@ -6,6 +6,6 @@ script:
   - python3 setup.py sdist bdist_wheel
   - python3 -m twine check dist/*
 after_success:
-  - python3 -m twine upload dist/* --username $UNAME -p $PASSWORD
+  - python3 -m twine upload dist/* --username $UNAME -p $PASSWORD --skip-existing
 after_script:
   - rm dist/*

@@ -21,7 +21,6 @@ def program(argv):
     shutil.copytree(os.path.join(script_dir, destination), fullpath)
     os.remove(fullpath+'/__main__.py')
     # create .env file
-    import pdb; pdb.set_trace()
     shutil.copy(fullpath+'/.env.sample', fullpath+'/.env')
 
 
