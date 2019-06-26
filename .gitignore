@@ -4,3 +4,4 @@ flask_app/app/__init__.pyc
 dist/
 flask_app.egg-info
 build/
+flask_app/.env

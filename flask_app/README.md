@@ -2,7 +2,7 @@
 A python package to create flask boiler plate code 
 
 ## __Installing this app__
-* Run  `pip install -i https://test.pypi.org/simple/ flask-app`
+* Run  `pip install flask-app`
 
 ## __Author__
 

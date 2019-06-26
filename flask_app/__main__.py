@@ -19,6 +19,10 @@ def program(argv):
     fullpath = os.path.join(cwd, appname)
     destination = args.destination
     shutil.copytree(os.path.join(script_dir, destination), fullpath)
+    os.remove(fullpath+'/__main__.py')
+    # create .env file
+    import pdb; pdb.set_trace()
+    shutil.copy(fullpath+'/.env.sample', fullpath+'/.env')
 
 
 def main():
