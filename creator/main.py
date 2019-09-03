@@ -3,7 +3,7 @@ import os
 import shutil
 import sys
 
-cwd = os.getcwd()
+cwd = os.path.dirname(os.path.realpath('flask_app'))
 script_dir = cwd+'/flask_app'
 
 
