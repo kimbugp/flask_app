@@ -7,3 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 0.0.1
 - App creation
 - Enable travis build and pypi upload
+
+## 0.1.0
+- Default copy folder to current directory
+- fix formatting with black

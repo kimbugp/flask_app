@@ -10,7 +10,7 @@ def create_app(config_name):
 
     app.config.from_object(config_name)
     app.url_map.strict_slashes = False
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     # register views
     blue_prints = BaseBluePrint(app)
@@ -18,6 +18,7 @@ def create_app(config_name):
 
     # register ORM
     import api.models
+
     db.init_app(app)
 
     return app

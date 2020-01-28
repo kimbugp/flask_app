@@ -1,7 +1,8 @@
 from flask import request
 
+
 class BaseBluePrint(object):
-    def __init__(self,app=None):
+    def __init__(self, app=None):
         self.app = app
 
     def register(self):
