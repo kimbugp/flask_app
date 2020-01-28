@@ -1,7 +1,7 @@
 import argparse
 import os
 import sys
-from copier import copy, get_script_path
+from .copier import copy, get_script_path
 
 
 def program(argv):
@@ -11,8 +11,7 @@ def program(argv):
     parser.add_argument("appname", help="The application name")
     parser.add_argument("-d", "--destination", help="Folder to copy code to")
     args = parser.parse_args()
-    script_dir = get_script_path()
-
+    script_dir = get_script_path(copy)
     appname = args.appname
     destination = args.destination
     if not destination:

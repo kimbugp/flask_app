@@ -1,0 +1,42 @@
+CHANGES
+=======
+
+* - merge cwd fix
+* fix cwd error
+* Default copy folder to current directory
+* format with black
+* refactor cwd
+
+0.0.8
+-----
+
+* update readme file"
+
+0.0.6
+-----
+
+* add existing directory check
+* fix destination path
+
+0.0.5
+-----
+
+* enable class callable for views
+
+0.0.4
+-----
+
+* remove init file in create package
+* remove pdb
+* change foolder structure
+* setup versionining
+
+v0.0.1
+------
+
+* enable travis deployment
+* fix failing requirements file
+* add packaging files
+* add sample test
+* add developement environment
+* initial commit

@@ -3,10 +3,10 @@ import os
 import shutil
 
 
-def get_script_path():
+def get_script_path(location):
     """Gets the scripts path"""
-    path = inspect.getfile(copy)
-    general_path = os.path.dirname(os.path.dirname(path))
+    path = inspect.getfile(location)
+    general_path = os.path.dirname(path)
     return os.path.join(general_path, 'flask_app')
 
 
