@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+* fix directory
+
+v1.0
+----
+
 * - merge cwd fix
 * fix cwd error
 * Default copy folder to current directory
