@@ -17,8 +17,10 @@ def program(argv):
 
     appname = args.appname
     destination = args.destination
-
-    destination_path = os.path.join(destination, appname)
+    if not destination:
+        destination_path = os.path.join(os.getcwd(), appname)
+    else:
+        destination_path = os.path.join(destination, appname)
     full_path = os.path.dirname(os.path.abspath(destination_path))
     try:
         shutil.copytree(os.path.join(script_dir), destination_path)
