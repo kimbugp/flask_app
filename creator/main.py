@@ -1,10 +1,7 @@
 import argparse
 import os
-import shutil
 import sys
-
-cwd = os.path.dirname(os.path.realpath("flask_app"))
-script_dir = cwd + "/flask_app"
+from copier import copy, get_script_path
 
 
 def program(argv):
@@ -14,6 +11,7 @@ def program(argv):
     parser.add_argument("appname", help="The application name")
     parser.add_argument("-d", "--destination", help="Folder to copy code to")
     args = parser.parse_args()
+    script_dir = get_script_path()
 
     appname = args.appname
     destination = args.destination
@@ -21,19 +19,7 @@ def program(argv):
         destination_path = os.path.join(os.getcwd(), appname)
     else:
         destination_path = os.path.join(destination, appname)
-    full_path = os.path.dirname(os.path.abspath(destination_path))
-    try:
-        shutil.copytree(os.path.join(script_dir), destination_path)
-        # create .env file
-        shutil.copy(
-            destination_path + "/.env.sample", destination_path + "/.env"
-        )
-        msg = f"\nCopy to {full_path} successfull\n"
-        print("\033[92m {}\033[00m".format(msg))
-
-    except FileExistsError:
-        msg = f"Directory {full_path} already exists"
-        print("\n\033[91m {}\033[00m\n".format(msg))
+    return copy(script_dir, destination_path)
 
 
 def main():
