@@ -4,7 +4,7 @@ from os import getenv
 class BaseConfig(object):
     DEBUG = False
     SECRET_KEY = getenv("SECRET_KEY")
-    SQLALCHEMY_DATABASE_URI = getenv('DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI = getenv("DATABASE_URL")
 
 
 class ProductionConfig(BaseConfig):
@@ -24,8 +24,8 @@ class TestingConfig(BaseConfig):
 
 
 config = {
-    'development': DevelopmentConfig,
-    'staging': StagingConfig,
-    'production': ProductionConfig,
-    'testing': TestingConfig
+    "development": DevelopmentConfig,
+    "staging": StagingConfig,
+    "production": ProductionConfig,
+    "testing": TestingConfig,
 }

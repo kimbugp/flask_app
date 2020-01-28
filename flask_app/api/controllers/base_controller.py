@@ -19,7 +19,7 @@ class BaseController(object):
             "get": self.get,
             "post": self.post,
             "put": self.put,
-            "delete": self.delete
+            "delete": self.delete,
         }
         call = mapper.get(request.method.lower())
         return call()
